@@ -1,0 +1,2356 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/maryam/ontologies/2022/7/Bonyad"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/maryam/ontologies/2022/7/Bonyad">
+    <Prefix name="" IRI="http://www.semanticweb.org/maryam/ontologies/2022/7/untitled-ontology-42"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Art"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Article"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Audio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Book"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Conversation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cultural"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cyberspace"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Handicraft"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Image"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ImageArt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Image_type"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Instagram"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Manuscript"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Media"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Multimedia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Music"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Note"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Notices"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization-Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization-Product"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PerformingArt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person-Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person-Product"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Poem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Product"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Quran"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Report"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scientific-Research"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Screenplay"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialNetwork"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Telegram"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Thesis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Video"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Video_type"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VisualArt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weblog"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Website"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#news"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#research"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#text"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#twitter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#video"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_Participant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_imagetype"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_location"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_member"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_producer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_product"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_videotype"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_member_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_performed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#knows"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#location_created"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#participate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#performs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#presents"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#related_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#top_event"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DOI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#English_abstract"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#English_title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ISBN"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#abstract"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#accept_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#account_type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#activeYears"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#activity_type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#address"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#affiliation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#age_range"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#area_code"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#area_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#author"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#award"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#aya_no"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#birthDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#brand"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#budget"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#caption"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#category"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#centrality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#chapter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#citation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#city_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#content"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#content_size"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#content_type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#coordinates"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#deathDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#defense_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#duration(hour)"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#e_type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#edition"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#email"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#end_date/time"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#eventStatus"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#familyName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fax_number"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#field"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#first_publication_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#format"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#gender"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#genre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#givenName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#historical_map"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#homepage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#is_accessible_for_free"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#keywords"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#language"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#last_publication_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#library&apos;s_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#line_type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#major_type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#material"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#miner_type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#modification_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nationality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#number_of_pages"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#number_of_people_attending"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#number_of_volumes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#object"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#organization_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#other_activity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#p_type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#performance_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#place_of_production"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#previous_start_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#productID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#product_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#production_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#province_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#publication_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#reference"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#relation_type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#release_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#scope_note"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#source"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#speciality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#stablish_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#start_date/time"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#status"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#student_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#subject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sura"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tag"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#telephone"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#text"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#thesis_degree"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#translated_text"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#type_of_collaboration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#unique_ID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#university"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#uri"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#version"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#video_quality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#writer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#E1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#E10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#E11"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#E12"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#E2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#E3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#E4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#E5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#E6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#E7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#E8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#E9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#E_10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Img_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Img_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#P1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#P2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Per_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Per_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Per_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Per_Event_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Per_Event_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Per_Pro_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Per_Pro_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vid_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#film"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#painting"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#photo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#poster"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rawvideo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#shortfilm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#trailer"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Image_type"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#photo"/>
+            <NamedIndividual IRI="#poster"/>
+            <NamedIndividual IRI="#painting"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Video_type"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#rawvideo"/>
+            <NamedIndividual IRI="#trailer"/>
+            <NamedIndividual IRI="#film"/>
+            <NamedIndividual IRI="#shortfilm"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Art"/>
+        <Class IRI="#Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <Class IRI="#Scientific-Research"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Audio"/>
+        <Class IRI="#Multimedia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Book"/>
+        <Class IRI="#Scientific-Research"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Conversation"/>
+        <Class IRI="#Notices"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cultural"/>
+        <Class IRI="#Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Handicraft"/>
+        <Class IRI="#Art"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Image"/>
+        <Class IRI="#Multimedia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImageArt"/>
+        <Class IRI="#Art"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instagram"/>
+        <Class IRI="#SocialNetwork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Manuscript"/>
+        <Class IRI="#Scientific-Research"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Media"/>
+        <Class IRI="#Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Multimedia"/>
+        <Class IRI="#Media"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Music"/>
+        <Class IRI="#Art"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Note"/>
+        <Class IRI="#Notices"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Notices"/>
+        <Class IRI="#Media"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PerformingArt"/>
+        <Class IRI="#Art"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Poem"/>
+        <Class IRI="#Cultural"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Quran"/>
+        <Class IRI="#text"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Report"/>
+        <Class IRI="#Notices"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scientific-Research"/>
+        <Class IRI="#Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Screenplay"/>
+        <Class IRI="#ImageArt"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialNetwork"/>
+        <Class IRI="#Cyberspace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Telegram"/>
+        <Class IRI="#SocialNetwork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Thesis"/>
+        <Class IRI="#Scientific-Research"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Video"/>
+        <Class IRI="#ImageArt"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VisualArt"/>
+        <Class IRI="#Art"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weblog"/>
+        <Class IRI="#Cyberspace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Website"/>
+        <Class IRI="#Cyberspace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#news"/>
+        <Class IRI="#Notices"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#research"/>
+        <Class IRI="#Scientific-Research"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#text"/>
+        <Class IRI="#Cultural"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#twitter"/>
+        <Class IRI="#SocialNetwork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#video"/>
+        <Class IRI="#Multimedia"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#E1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#E10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#E11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#E12"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#E2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#E3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#E4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#E5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#E6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#E7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#E8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#E9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#E_10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Image"/>
+        <NamedIndividual IRI="#Img_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Image"/>
+        <NamedIndividual IRI="#Img_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Place"/>
+        <NamedIndividual IRI="#P1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Place"/>
+        <NamedIndividual IRI="#P2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#Per_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#Per_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person-Event"/>
+        <NamedIndividual IRI="#Per_Event_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person-Event"/>
+        <NamedIndividual IRI="#Per_Event_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person-Product"/>
+        <NamedIndividual IRI="#Per_Pro_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person-Product"/>
+        <NamedIndividual IRI="#Per_Pro_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#video"/>
+        <NamedIndividual IRI="#Vid_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Video_type"/>
+        <NamedIndividual IRI="#film"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Image_type"/>
+        <NamedIndividual IRI="#painting"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Image_type"/>
+        <NamedIndividual IRI="#photo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Image_type"/>
+        <NamedIndividual IRI="#poster"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_Participant"/>
+        <NamedIndividual IRI="#E1"/>
+        <NamedIndividual IRI="#Per_Event_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_Participant"/>
+        <NamedIndividual IRI="#E1"/>
+        <NamedIndividual IRI="#Per_Event_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_location"/>
+        <NamedIndividual IRI="#E1"/>
+        <NamedIndividual IRI="#P1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#top_event"/>
+        <NamedIndividual IRI="#E1"/>
+        <NamedIndividual IRI="#E_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#top_event"/>
+        <NamedIndividual IRI="#E10"/>
+        <NamedIndividual IRI="#E_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#top_event"/>
+        <NamedIndividual IRI="#E11"/>
+        <NamedIndividual IRI="#E_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#top_event"/>
+        <NamedIndividual IRI="#E12"/>
+        <NamedIndividual IRI="#E_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#top_event"/>
+        <NamedIndividual IRI="#E2"/>
+        <NamedIndividual IRI="#E_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#top_event"/>
+        <NamedIndividual IRI="#E3"/>
+        <NamedIndividual IRI="#E_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#top_event"/>
+        <NamedIndividual IRI="#E4"/>
+        <NamedIndividual IRI="#E_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#top_event"/>
+        <NamedIndividual IRI="#E5"/>
+        <NamedIndividual IRI="#E_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#top_event"/>
+        <NamedIndividual IRI="#E6"/>
+        <NamedIndividual IRI="#E_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#top_event"/>
+        <NamedIndividual IRI="#E7"/>
+        <NamedIndividual IRI="#E_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#top_event"/>
+        <NamedIndividual IRI="#E8"/>
+        <NamedIndividual IRI="#E_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#top_event"/>
+        <NamedIndividual IRI="#E9"/>
+        <NamedIndividual IRI="#E_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_imagetype"/>
+        <NamedIndividual IRI="#Img_1"/>
+        <NamedIndividual IRI="#photo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_producer"/>
+        <NamedIndividual IRI="#Img_1"/>
+        <NamedIndividual IRI="#Per_Pro_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#related_to"/>
+        <NamedIndividual IRI="#Img_1"/>
+        <NamedIndividual IRI="#E2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_producer"/>
+        <NamedIndividual IRI="#Img_2"/>
+        <NamedIndividual IRI="#Per_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#related_to"/>
+        <NamedIndividual IRI="#Img_2"/>
+        <NamedIndividual IRI="#E2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_product"/>
+        <NamedIndividual IRI="#Per_1"/>
+        <NamedIndividual IRI="#Per_Pro_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#participate"/>
+        <NamedIndividual IRI="#Per_2"/>
+        <NamedIndividual IRI="#Per_Event_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#participate"/>
+        <NamedIndividual IRI="#Per_3"/>
+        <NamedIndividual IRI="#Per_Event_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_videotype"/>
+        <NamedIndividual IRI="#Vid_1"/>
+        <NamedIndividual IRI="#rawvideo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#related_to"/>
+        <NamedIndividual IRI="#Vid_1"/>
+        <NamedIndividual IRI="#E1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#E1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">انتخاب کتاب سال رضوی</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#E10"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">همایش ایثار و شهادت</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#E11"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">همایش سیره  معارف رضوی</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#E12"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">یادمان شهری رضوی</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#E2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">نمایشگاه پوستر دانشجویی</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#E3"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">همایش نقش زیارت در کاهش آسیب اجتماعی</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#E4"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">جشنواره دانشجویی دانشگاه علوم پزشکی</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#E5"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">تاتر تک بازیگر</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#E6"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">مسابقه سیره و معارف رضوی</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#E7"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">همایش جاده ولایت</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#E8"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">نمایشگاه پوستر دانشجویی</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#E9"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">همایش اقتصاد خانواده در فرهنگ رضوی</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#E_10"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">جشنواره دهم</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#p_type"/>
+        <NamedIndividual IRI="#Img_1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">پوستر</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#Img_1"/>
+        <Literal datatypeIRI="&xsd;string">عکس شماره 1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#p_type"/>
+        <NamedIndividual IRI="#Img_2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">پوستر</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#Img_2"/>
+        <Literal datatypeIRI="&xsd;string">عکس شماره 2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#city_name"/>
+        <NamedIndividual IRI="#P1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">مشهد</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#province_name"/>
+        <NamedIndividual IRI="#P1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">خراسان رضوی</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#city_name"/>
+        <NamedIndividual IRI="#P2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">سبزوار</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#product_name"/>
+        <NamedIndividual IRI="#P2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">خراسان رضوی</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#familyName"/>
+        <NamedIndividual IRI="#Per_1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">سلطانی</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#givenName"/>
+        <NamedIndividual IRI="#Per_1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">محمود</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#familyName"/>
+        <NamedIndividual IRI="#Per_2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">سعیدی</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#givenName"/>
+        <NamedIndividual IRI="#Per_2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">رضا</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#familyName"/>
+        <NamedIndividual IRI="#Per_3"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">کاهانی</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#givenName"/>
+        <NamedIndividual IRI="#Per_3"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">محسن</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#relation_type"/>
+        <NamedIndividual IRI="#Per_Event_1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">شرکت کننده</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#relation_type"/>
+        <NamedIndividual IRI="#Per_Event_2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">داور</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#Vid_1"/>
+        <Literal datatypeIRI="&xsd;string">مراسم اختتامیه</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_product"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#participate"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#performs"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#is_member_of"/>
+        <ObjectProperty IRI="#has_member"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#is_performed"/>
+        <ObjectProperty IRI="#performs"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_Participant"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_imagetype"/>
+        <Class IRI="#Image"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_location"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_member"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_producer"/>
+        <Class IRI="#Product"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_product"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_product"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_videotype"/>
+        <Class IRI="#video"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#knows"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#location_created"/>
+        <Class IRI="#Product"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#participate"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#participate"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#performs"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#performs"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#presents"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#related_to"/>
+        <Class IRI="#Product"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#top_event"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_Participant"/>
+        <Class IRI="#Organization-Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_Participant"/>
+        <Class IRI="#Person-Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_imagetype"/>
+        <Class IRI="#Image_type"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_location"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_member"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_producer"/>
+        <Class IRI="#Organization-Product"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_producer"/>
+        <Class IRI="#Person-Product"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_product"/>
+        <Class IRI="#Organization-Product"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_product"/>
+        <Class IRI="#Person-Product"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_videotype"/>
+        <Class IRI="#Video_type"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#knows"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#location_created"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#participate"/>
+        <Class IRI="#Organization-Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#participate"/>
+        <Class IRI="#Person-Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#performs"/>
+        <Class IRI="#Organization-Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#performs"/>
+        <Class IRI="#Person-Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#presents"/>
+        <Class IRI="#Product"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#related_to"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#top_event"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DOI"/>
+        <Class IRI="#Scientific-Research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#English_abstract"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#English_abstract"/>
+        <Class IRI="#Thesis"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#English_title"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#English_title"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#English_title"/>
+        <Class IRI="#Thesis"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#English_title"/>
+        <Class IRI="#research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ID"/>
+        <Class IRI="#Organization-Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ID"/>
+        <Class IRI="#Organization-Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ID"/>
+        <Class IRI="#Person-Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ID"/>
+        <Class IRI="#Person-Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ISBN"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#abstract"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#abstract"/>
+        <Class IRI="#Thesis"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#abstract"/>
+        <Class IRI="#research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#accept_date"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#account_type"/>
+        <Class IRI="#SocialNetwork"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#activeYears"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#activity_type"/>
+        <Class IRI="#Organization"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#address"/>
+        <Class IRI="#Organization"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#address"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#address"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#affiliation"/>
+        <Class IRI="#Website"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#age_range"/>
+        <Class IRI="#Poem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#area_code"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#area_name"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#author"/>
+        <Class IRI="#Notices"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#award"/>
+        <Class IRI="#Organization"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#award"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#award"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#birthDate"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#brand"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#budget"/>
+        <Class IRI="#research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#caption"/>
+        <Class IRI="#Video"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#category"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#centrality"/>
+        <Class IRI="#Poem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#chapter"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#citation"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#city_name"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#content"/>
+        <Class IRI="#Scientific-Research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#content_size"/>
+        <Class IRI="#Multimedia"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#content_size"/>
+        <Class IRI="#Music"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#content_size"/>
+        <Class IRI="#Video"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#content_type"/>
+        <Class IRI="#Multimedia"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#coordinates"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#deathDate"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#defense_date"/>
+        <Class IRI="#Thesis"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#description"/>
+        <Class IRI="#Organization-Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#description"/>
+        <Class IRI="#Organization-Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#description"/>
+        <Class IRI="#Person-Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#description"/>
+        <Class IRI="#Person-Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#description"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#duration(hour)"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#duration(hour)"/>
+        <Class IRI="#Music"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#duration(hour)"/>
+        <Class IRI="#Screenplay"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#duration(hour)"/>
+        <Class IRI="#Video"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#e_type"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#edition"/>
+        <Class IRI="#Scientific-Research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#email"/>
+        <Class IRI="#Organization"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#email"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#end_date/time"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#end_date/time"/>
+        <Class IRI="#Organization-Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#end_date/time"/>
+        <Class IRI="#Organization-Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#end_date/time"/>
+        <Class IRI="#Person-Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#end_date/time"/>
+        <Class IRI="#Person-Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#eventStatus"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#familyName"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#fax_number"/>
+        <Class IRI="#Organization"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#field"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#field"/>
+        <Class IRI="#Thesis"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#field"/>
+        <Class IRI="#research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#first_publication_date"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#format"/>
+        <Class IRI="#Poem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#gender"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#genre"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#genre"/>
+        <Class IRI="#Multimedia"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#genre"/>
+        <Class IRI="#Music"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#genre"/>
+        <Class IRI="#Screenplay"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#genre"/>
+        <Class IRI="#Video"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#givenName"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#historical_map"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#homepage"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#is_accessible_for_free"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#is_accessible_for_free"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#keywords"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#keywords"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#keywords"/>
+        <Class IRI="#Thesis"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#keywords"/>
+        <Class IRI="#research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#language"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#language"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#last_publication_date"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#library&apos;s_name"/>
+        <Class IRI="#Manuscript"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#line_type"/>
+        <Class IRI="#Manuscript"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#major_type"/>
+        <Class IRI="#PerformingArt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#major_type"/>
+        <Class IRI="#Poem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#major_type"/>
+        <Class IRI="#Screenplay"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#major_type"/>
+        <Class IRI="#Video"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#material"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#miner_type"/>
+        <Class IRI="#PerformingArt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#miner_type"/>
+        <Class IRI="#Poem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#miner_type"/>
+        <Class IRI="#Screenplay"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#miner_type"/>
+        <Class IRI="#Video"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#modification_date"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nationality"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#number_of_pages"/>
+        <Class IRI="#Scientific-Research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#number_of_people_attending"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#number_of_volumes"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#object"/>
+        <Class IRI="#research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#organization_name"/>
+        <Class IRI="#Organization"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#other_activity"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#p_type"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#performance_date"/>
+        <Class IRI="#PerformingArt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#place_of_production"/>
+        <Class IRI="#Manuscript"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#previous_start_date"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#productID"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#product_name"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#production_date"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#province_name"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#publication_date"/>
+        <Class IRI="#Report"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#publication_date"/>
+        <Class IRI="#news"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#reference"/>
+        <Class IRI="#Scientific-Research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#relation_type"/>
+        <Class IRI="#Organization-Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#relation_type"/>
+        <Class IRI="#Organization-Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#relation_type"/>
+        <Class IRI="#Person-Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#relation_type"/>
+        <Class IRI="#Person-Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#release_date"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#scope_note"/>
+        <Class IRI="#Note"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#source"/>
+        <Class IRI="#Cultural"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#speciality"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#stablish_date"/>
+        <Class IRI="#Organization"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#start_date/time"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#start_date/time"/>
+        <Class IRI="#Organization-Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#start_date/time"/>
+        <Class IRI="#Organization-Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#start_date/time"/>
+        <Class IRI="#Person-Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#start_date/time"/>
+        <Class IRI="#Person-Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#status"/>
+        <Class IRI="#PerformingArt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#status"/>
+        <Class IRI="#Scientific-Research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#student_name"/>
+        <Class IRI="#Thesis"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#subject"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#subject"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#subject"/>
+        <Class IRI="#Scientific-Research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Art"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Audio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Conversation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Cultural"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Cyberspace"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Handicraft"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Image"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#ImageArt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Instagram"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Manuscript"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Media"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Multimedia"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Music"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Note"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Notices"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Organization"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Organization-Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Organization-Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#PerformingArt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Person-Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Person-Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Poem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Quran"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Report"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Scientific-Research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Screenplay"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#SocialNetwork"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Telegram"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Thesis"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Video"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#VisualArt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Weblog"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#Website"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#news"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#text"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#twitter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tag"/>
+        <Class IRI="#video"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#telephone"/>
+        <Class IRI="#Organization"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#telephone"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#text"/>
+        <Class IRI="#Scientific-Research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#thesis_degree"/>
+        <Class IRI="#Thesis"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#title"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#title"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#title"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#title"/>
+        <Class IRI="#Music"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#title"/>
+        <Class IRI="#PerformingArt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#title"/>
+        <Class IRI="#Scientific-Research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#title"/>
+        <Class IRI="#Screenplay"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#title"/>
+        <Class IRI="#Thesis"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#title"/>
+        <Class IRI="#Video"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#title"/>
+        <Class IRI="#research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#translated_text"/>
+        <Class IRI="#Quran"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#type_of_collaboration"/>
+        <Class IRI="#Organization-Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#type_of_collaboration"/>
+        <Class IRI="#Organization-Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#type_of_collaboration"/>
+        <Class IRI="#Person-Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#type_of_collaboration"/>
+        <Class IRI="#Person-Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#unique_ID"/>
+        <Class IRI="#Manuscript"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#university"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#university"/>
+        <Class IRI="#Thesis"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Art"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Audio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Conversation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Cultural"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Cyberspace"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Handicraft"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Image"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#ImageArt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Instagram"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Manuscript"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Media"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Multimedia"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Music"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Note"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Notices"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Organization"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Organization-Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Organization-Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#PerformingArt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Person-Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Person-Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Poem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Quran"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Report"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Scientific-Research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Screenplay"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#SocialNetwork"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Telegram"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Thesis"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Video"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#VisualArt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Weblog"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#Website"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#news"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#text"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#twitter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#uri"/>
+        <Class IRI="#video"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#version"/>
+        <Class IRI="#Scientific-Research"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#video_quality"/>
+        <Class IRI="#Video"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#writer"/>
+        <Class IRI="#Weblog"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#e_type"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#p_type"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tag"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#uri"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Event</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Event</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
