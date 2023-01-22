@@ -101,3 +101,19 @@ create
 (Product)-[:has_producer] ->(Organization_Product),
 (Organization)-[:has_product]->(Organization_Product)
 
+
+//Individuals 
+create (E1:Event {title:"انتخاب کتاب سال رضوی"})
+create (E2:Event {title:"نمایشگاه پوستر دانشجویی"})
+create (E3:Event {title:"همایش نقش زیارت در کاهش آسیب اجتماعی"})
+create (E4:Event {title:"جشنواره دانشجویی دانشگاه علوم پزشکی"})
+create (E5:Event {title:"تاتر تک بازیگر"})
+create (E6:Event {title:"مسابقه سیره و معارف رضوی"})
+create (E7:Event {title:"همایش جاده ولایت"})
+create (E8:Event {title:"نمایشگاه پوستر دانشجویی"})
+create (E9:Event {title:"همایش اقتصاد خانواده در فرهنگ رضوی"})
+create (E10:Event {title:"همایش ایثار و شهادت"})
+create (E11:Event {title:"همایش سیره  معارف رضوی"})
+create (E12:Event {title:"یادمان شهری رضوی"})
+create (E_1:Event {title:"جشنواره دهم"})
+create (film:Video_type)
