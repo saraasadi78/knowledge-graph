@@ -3,20 +3,20 @@
 CREATE
 (thing {title:"thing"}),
 (Cyberspace:thing {title:"Cyberspace", uri:0, ID:0, tag:"Cyberspace"}),
-(Event:thing { title:"Event",duration(hour):0 ,e_type:0 ,end_date/time:0 , eventStatus:0 ,  is_accessible_for_free:"NULL" , language:"NULL",
-number_of_people_attending:0, previous_start_date:0 , start_date/time:0, subject:"NULL" ,uri:0, ID:0, tag:"Event"}),
-(Image_type:thing {title:"Image_type",  uri:0, ID:0, tag:"Image_type"}),
+(Event:thing { title:"Event",duration:0 ,e_type:0 ,end_date:0 , eventStatus:0 ,  is_accessible_for_free:"NULL" , language:"NULL",
+number_of_people_attending:0, previous_start_date:0 , start_date:0, subject:"NULL" ,uri:0, ID:0, tag:"Event"}),
+(Image_type:thing {title:"Image_type", uri:0, ID:0, tag:"Image_type"}),
 (Organization:thing {title:"Organization", address:0, activity_type:0, award:0, email:"NULL", fax_number:0 , organization_name:"NULL",stablish_date:0,
 telephone:0 ,uri:0, ID:0}),
-(Organization_Product:thing {title:"Organization-Product", description:"NULL" , end_date/time:0 , start_date/time:0 ,relation_type:0   ,ID:0 , 
+(Organization_Product:thing {title:"Organization-Product", description:"NULL" , end_date:0 , start_date:0 ,relation_type:0 ,ID:0 , 
 uri:0 ,type_of_collaboration:"NULL", tag:"Organization-Product"}),
-(Organization_Event:thing {title:"Organization-Event", description:"NULL" , end_date/time:0 , start_date/time:0  ,relation_type:0 ,ID:0, uri:0,
+(Organization_Event:thing {title:"Organization-Event", description:"NULL", end_date:0 , start_date:0  ,relation_type:0 ,ID:0, uri:0,
 type_of_collaboration:"NULL", tag:"Organization-Event"}),
 (Person:thing {title:"Person" ,address:0, activeYears:0, gender:"NULL" , award:0, birthDate:0, deathDate:0, email:"NULL",givenName:"NULL" ,
-familyName:"NULL", nationality:"NULL", homepage:"NULL" ,other_activity:0 , speciality:0 ,uri:0,  telephone:0 , ID:0, tag:"Person"}),
-(Person_Product:thing {title:"Person-Product", description:"NULL", end_date/time:0 , start_date/time:0 ,relation_type:0  , type_of_collaboration:"NULL",
+familyName:"NULL", nationality:"NULL", homepage:"NULL", other_activity:0 , speciality:0 ,uri:0,  telephone:0 , ID:0, tag:"Person"}),
+(Person_Product:thing {title:"Person-Product", description:"NULL", end_date:0 , start_date:0 ,relation_type:0  , type_of_collaboration:"NULL",
 ID:0, uri:0 , tag:"Organization"}),
-(Person_Event:thing {title: "Person-Event" ,description:"NULL" , end_date/time:0 , start_date/time:0 ,relation_type:0  ,ID:0, uri:0 ,
+(Person_Event:thing {title: "Person-Event" ,description:"NULL" , end_date:0 ,start_date:0 ,relation_type:0 ,ID:0, uri:0 ,
 type_of_collaboration:"NULL", tag:"Person-Event"}),
 (Product:thing {title:"Product", brand:"NULL" ,category:"NULL" ,description:"NULL" , is_accessible_for_free:"NULL", language:"NULL" ,material:"NULL", 
 modification_date:0, p_type:0, productID:0, product_name:"NULL", production_date:0, release_date:0,award:0, uri:0, subject:"NULL", ID:0, tag:"Product"}),
@@ -25,6 +25,7 @@ uri:0, ID:0 , tag:"Place"}),
 (Video_type:thing {title:"Video_type"})
 
 //SubClass
+
 create (Website:Cyberspace:thing {title:"Website", affiliation:0, uri:0, ID:0, tag:"Website"})
 create (Weblog:Cyberspace:thing {title:"Weblog", uri:0, ID:0, writer:"NULL", tag:"Weblog"})
 create (SocialNetwork:Cyberspace:thing {title:"SocialNetwork", account_type:"NULL", uri:0, ID:0, tag:"SocialNetwork"})
@@ -43,7 +44,7 @@ student_name:"NULL", tag:"Thesis", thesis_degree:"NULL", university:"NULL", uri:
 create (Article:Scientific_Research:Product:thing {title:"Article", English_abstract:0, English_title:"NULL",abstract:0, accept_date:0,citation:0 , field:"NULL",
 keywords:"NULL",  tag:"Article", university:"NULL", uri:0})
 create (research:Scientific_Research:Product:thing {title:"research",English_title:"NULL", abstract:0, budget:0, field:"NULL" ,keywords:"NULL",
-object:"NULL" , tag:"research" })
+object:"NULL" ,tag:"research" })
 create (Book:Scientific_Research:Product:thing {title:"Book",English_title:"NULL", ISBN:0, chapter:0 , first_publication_date:0, genre:"NULL" , keywords:"NULL",
 last_publication_date:0, number_of_volumes:0 , tag:"Book"})
 create (Manuscript:Scientific_Research:Product:thing {title:"Manuscript", English_title:"NULL", librarys_name:"NULL", line_type:"NULL", place_of_production:"NULL",
@@ -103,6 +104,7 @@ create
 
 
 //Individuals 
+
 create (E1:Event {title:"انتخاب کتاب سال رضوی"})
 create (E2:Event {title:"نمایشگاه پوستر دانشجویی"})
 create (E3:Event {title:"همایش نقش زیارت در کاهش آسیب اجتماعی"})
@@ -115,5 +117,55 @@ create (E9:Event {title:"همایش اقتصاد خانواده در فرهنگ 
 create (E10:Event {title:"همایش ایثار و شهادت"})
 create (E11:Event {title:"همایش سیره  معارف رضوی"})
 create (E12:Event {title:"یادمان شهری رضوی"})
-create (E_1:Event {title:"جشنواره دهم"})
+create (E_10:Event {title:"جشنواره دهم"})
 create (film:Video_type)
+create (Img_1:Image {title:"عکس شماره 1", p_type:"پوستر"})
+create (Img_2:Image {title:"عکس شماره 2", p_type:"پوستر"})
+create (P1:Place {city_name:"مشهد", province_name:"خراسان رضوی"}
+create (P2:Place {city_name:"سبزوار", province_name:"خراسان رضوی"}
+create (painting:Image_type)
+create (photo:Image_type)
+create (poster:Image_type)
+create (Per_1:Person  {familyName:"سلطانی" , givenName:"محمود"})
+create (Per_2:Person  {familyName:"سعیدی" , givenName:"رضا"})
+create (Per_3:Person  {familyName:"کاهانی" , givenName:"محسن"})
+create (Per_Event_1:Person-Event {relation_type:"شرکت کننده"})
+create (Per_Event_2:Person-Event {relation_type:"داور"})
+create (Per_Pro_1:Person-Product)
+create (Per_Pro_2:Person-Product)
+create (Vid_1:video {title:"مراسم اختتامیه"})
+create (trailer:video)
+create (shortfilm:video)
+create (rawvideo:video)
+
+//relationships
+
+create (E1)-[:has_location]->(P1)
+create (E1)-[:has_Participant]->(Per_Event_1)
+create (E1)-[:has_Participant]->(Per_Event_2)
+create (E1)-[:has_location]->(P1)
+create (E1)-[:top_event]->(E_10)
+create (E2)-[:top_event]->(E_10)
+create (E3)-[:top_event]->(E_10)
+create (E4)-[:top_event]->(E_10)
+create (E5)-[:top_event]->(E_10)
+create (E6)-[:top_event]->(E_10)
+create (E7)-[:top_event]->(E_10)
+create (E8)-[:top_event]->(E_10)
+create (E9)-[:top_event]->(E_10)
+create (E10)-[:top_event]->(E_10)
+create (E11)-[:top_event]->(E_10)
+create (E12)-[:top_event]->(E_10)
+
+create (Img_1)-[:has_imagetype]->(photo)
+create (Img_1)-[:has_producer]->(Per_Pro_1)
+create (Img_1)-[:related_to]->(E2)
+create (Img_2)-[:has_producer]->(Per_2)
+create (Img_2)-[:related_to]->(E2)
+
+create (Per_1)-[:has_product]->(Per_Pro_1)
+create (Per_2)-[:participate]->(Per_Event_1)
+create (Per_3)-[:participate]->(Per_Event_2)
+
+create (Vid_1)-[:has_videotype]->(rawvideo)
+create (Vid_1)-[:related_to]->(E1)
