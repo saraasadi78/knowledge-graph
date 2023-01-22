@@ -33,10 +33,10 @@ create (Instagram:SocialNetwork:Cyberspace:thing {title:"Instagram", uri:0, ID:0
 create (Telegram:SocialNetwork:Cyberspace:thing {title:"Telegram", uri:0, ID:0, tag:"Telegram"})
 create (twitter:SocialNetwork:Cyberspace:thing {title:"twitter", uri:0 , ID:0, tag:"twitter"})
 
-create (Art:Product:thing {title:"Art", tag:"Art", uri:0})
-create (Cultural:Product:thing {title:"Cultural", source:"NULL", tag:"Cultural", uri:0})
-create (Media:Product:thing {title:"Media", tag:"Media", uri:0})
-create (Scientific_Research:Product:thing {title:"Scientific-Research",DOI:0,content:"NULL",edition:0, 
+create (Art:Product:thing {title:"Art", tag:"Art", uri:0, ID:0})
+create (Cultural:Product:thing {title:"Cultural", source:"NULL", tag:"Cultural", uri:0,, ID:0})
+create (Media:Product:thing {title:"Media", tag:"Media", uri:0,, ID:0})
+create (Scientific_Research:Product:thing {title:"Scientific-Research",DOI:0,content:"NULL",edition:0, ID:0,
 number_of_pages:0,reference:"NULL",status:"NULL",subject:"NULL",tag:"Scientific_Research",text:"NULL",uri:0,version:0})
 
 create (Thesis:Scientific_Research:Product:thing {title:"Thesis", English_abstract:0,English_title:"NULL",abstract:0,defense_date:0,field:"NULL" ,keywords:"NULL",
@@ -64,13 +64,13 @@ create (text:Cultural:Product:thing {title:"text", tag:"text", uri:0})
 create (Poem:Cultural:Product:thing {title:"Poem", age_range:0, centrality:0, tag:"Poem", uri:0 , major_type:0 , miner_type:0})
 create (Quran:text:Cultural:Product:thing {title:"Quran", tag:"Quran", uri:0, translated_text:"NULL"})
 
-create (Handicraft:Art:Product:thing {title:"Handicraft",  uri:0, tag:"Handicraft"})
-create (ImageArt:Art:Product:thing {tiltle:"ImageArt",  uri:0, tag:"ImageArt"})
-create (:Art:Product:thing {tiltle:"Music", duration:0,content_size:0, uri:0, genre:"NULL" ,tag:"Music"})
-create (PerformingArt:Art:Product:thing {tiltle:"PerformingArt", performance_date:0, miner_type:0, major_type:0 ,uri:0, tag:"PerformingArt" , status:0})
-create (VisualArt:Art:Product:thing {tiltle:"VisualArt",  uri:0, tag:"VisualArt"})
-create (Screenplay:ImageArt:Art:Product:thing {tiltle:"Screenplay" ,duration:0,  uri:0, tag:"Screenplay"})
-create (Video:ImageArt:Art:Product:thing {tiltle:"Video", video_quality:0,  major_type:0, miner_type:0,  genre:"NULL", duration:0,
+create (Handicraft:Art:Product:thing {title:"Handicraft",  uri:0, tag:"Handicraft", ID:0})
+create (ImageArt:Art:Product:thing {tiltle:"ImageArt",  uri:0, tag:"ImageArt", ID:0})
+create (Music:Art:Product:thing {tiltle:"Music", duration:0,content_size:0, uri:0, genre:"NULL" ,tag:"Music", ID:0})
+create (PerformingArt:Art:Product:thing {tiltle:"PerformingArt", performance_date:0, miner_type:0, major_type:0 ,uri:0, tag:"PerformingArt" , status:0, ID:0})
+create (VisualArt:Art:Product:thing {tiltle:"VisualArt",  uri:0, tag:"VisualArt", ID:0})
+create (Screenplay:ImageArt:Art:Product:thing {tiltle:"Screenplay" ,duration:0,  uri:0, tag:"Screenplay", ID:0})
+create (Video:ImageArt:Art:Product:thing {tiltle:"Video", video_quality:0,  major_type:0, miner_type:0,  genre:"NULL", duration:0,, ID:0
 content_size:0, uri:0, tag:"Video" ,caption:"NULL"})
 
 
@@ -169,3 +169,5 @@ create (Per_3)-[:participate]->(Per_Event_2)
 
 create (Vid_1)-[:has_videotype]->(rawvideo)
 create (Vid_1)-[:related_to]->(E1)
+
+//Match (e:Event), (o:Organization_Event) CREATE (e)-[h:has_Participant]->(o) RETURN e,h,o
