@@ -25,4 +25,50 @@ uri:0, ID:0 , tag:"Place"}),
 (Video_type:thing {title:"Video_type"})
 
 //SubClass
+create (Website:Cyberspace:thing {title:"Website", affiliation:0, uri:0, ID:0, tag:"Website"})
+create (Weblog:Cyberspace:thing {title:"Weblog", uri:0, ID:0, writer:"NULL", tag:"Weblog"})
+create (SocialNetwork:Cyberspace:thing {title:"SocialNetwork", account_type:"NULL", uri:0, ID:0, tag:"SocialNetwork"})
+create (Instagram:SocialNetwork:Cyberspace:thing {title:"Instagram", uri:0, ID:0, tag:"Instagram" })
+create (Telegram:SocialNetwork:Cyberspace:thing {title:"Telegram", uri:0, ID:0, tag:"Telegram"})
+create (twitter:SocialNetwork:Cyberspace:thing {title:"twitter", uri:0 , ID:0, tag:"twitter"})
+
+create (Art:Product:thing {title:"Art", tag:"Art", uri:0})
+create (Cultural:Product:thing {title:"Cultural", source:"NULL", tag:"Cultural", uri:0})
+create (Media:Product:thing {title:"Media". tag:"Media", uri:0})
+create (Scientific_Research:Product:thing {title:"Scientific-Research",DOI:0,content:"NULL",edition:0, 
+number_of_pages:0,reference:"NULL",status:"NULL",subject:"NULL",tag:"Scientific_Research",text:"NULL",uri:0,version:0})
+
+create (Thesis:Scientific_Research:Product:thing {title:"Thesis", English_abstract:0,English_title:"NULL",abstract:0,defense_date:0,field:"NULL" ,keywords:"NULL",
+student_name:"NULL", tag:"Thesis", thesis_degree:"NULL", university:"NULL", uri:0})
+create (Article:Scientific_Research:Product:thing {title:"Article", English_abstract:0, English_title:"NULL",abstract:0, accept_date:0,citation:0 , field:"NULL",
+keywords:"NULL",  tag:"Article", university:"NULL", uri:0})
+create (research:Scientific_Research:Product:thing {title:"research",English_title:"NULL", abstract:0, budget:0, field:"NULL" ,keywords:"NULL",
+object:"NULL" , tag:"research" })
+create (Book:Scientific_Research:Product:thing {title:"Book",English_title:"NULL", ISBN:0, chapter:0 , first_publication_date:0, genre:"NULL" , keywords:"NULL",
+last_publication_date:0, number_of_volumes:0 , tag:"Book"})
+create (Manuscript:Scientific_Research:Product:thing {title:"Manuscript", English_title:"NULL", librarys_name:"NULL", line_type:"NULL", place_of_production:"NULL",
+tag:"Manuscript", unique_ID:0})
+
+create (Multimedia:Media:Product:thing {title:"Multimedia", content_size:0,content_type:"NULL", genre:"NULL" , tag:"Multimedia", uri:0 })
+create (Notices:Media:Product:thing {title:"Notices" ,author:"NULL", tag:"Notices", uri:0})
+create (News:Notices:Media:Product:thing {title:"News", publication_date:0, tag:"News", uri:0})
+create (Report:Notices:Media:Product:thing {title:"Report",  publication_date:0, tag:"Report",uri:0 })
+create (Note:Notices:Media:Product:thing {title:"Note", scope_note:"NULL", tag:"Note", uri:0})
+create (Conversation:Notices:Media:Product:thing {title:"Conversation", tag:"Conversation", uri:0})
+create (Audio:Multimedia:Media:Product:thing {title:"Audio",tag:"Audio", uri:0 })
+create (Image:Multimedia:Media:Product:thing {title:"Image", tag:"Image", uri:0})
+create (video:Multimedia:Media:Product:thing {title:"video", tag:"video" , uri:0})
+
+create (text:Cultural:Product:thing {title:"text", tag:"text", uri:0})
+create (Poem:Cultural:Product:thing {title:"Poem", age_range:0, centrality:0, tag:"Poem", uri:0 , major_type:0 , miner_type:0})
+create (Quran:text:Cultural:Product:thing {title:"Quran", tag:"Quran", uri:0, translated_text:"NULL"})
+
+create (Handicraft:Art:Product:thing {title:"Handicraft",  uri:0, tag:"Handicraft"})
+create (ImageArt:Art:Product:thing {tiltle:"ImageArt",  uri:0, tag:"ImageArt"})
+create (Music:Art:Product:thing {tiltle:"Music", duration:0,content_size:0, uri:0, genre:"NULL" ,tag:"Music"})
+create (PerformingArt:Art:Product:thing {tiltle:"PerformingArt", performance_date:0, miner_type:0, major_type:0 ,uri:0, tag:"PerformingArt" , status:0})
+create (VisualArt:Art:Product:thing {tiltle:"VisualArt",  uri:0, tag:"VisualArt"})
+create (Screenplay:ImageArt:Art:Product:thing {tiltle:"Screenplay" ,duration:0,  uri:0, tag:"Screenplay"})
+create (Video:ImageArt:Art:Product:thing {tiltle:"Video", video_quality:0,  major_type:0, miner_type:0,  genre:"NULL", duration:0,
+content_size:0, uri:0, tag:"Video" ,caption:"NULL"})
 
