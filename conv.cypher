@@ -72,3 +72,32 @@ create (Screenplay:ImageArt:Art:Product:thing {tiltle:"Screenplay" ,duration:0, 
 create (Video:ImageArt:Art:Product:thing {tiltle:"Video", video_quality:0,  major_type:0, miner_type:0,  genre:"NULL", duration:0,
 content_size:0, uri:0, tag:"Video" ,caption:"NULL"})
 
+
+//Relations
+
+create 
+(Event)-[:has_Participant] ->(Organization_Event),
+(Image)-[:has_imagetype] -> (Image_type),
+(Event)-[:has_location] -> (Place),
+(Organization)-[:has_member] ->(Person),
+(Product)-[:has_producer] ->(Person_Product),
+(Person)-[:has_product]->(Person_Product),
+(Organization)-[:has_product]->(Person_Product),
+(video)-[:has_videotype]->(Video_type),
+(Person)-[:knows]->(Person),
+(Product)-[:location_created]->(Place),
+(Organization)-[:participate]->(Person_Event)
+(Organization)-[:participate]->(Organization_Event),
+(Person)-[:participate]->(Person_Event),
+(Person)-[:participate]->(Organization_Event),
+(Organization)-[:performs]->(Person_Event),
+(Organization)-[:performs]->(Organization_Event),
+(Person)-[:performs]->(Person_Event),
+(Person)-[:performs]->(Organization_Event),
+(Event)-[:presents]->(Product),
+(Product)-[:related_to]->(Event),
+(Event)-[:top_event]->(Event),
+(Event)-[:has_Participant] ->(Person_Event),
+(Product)-[:has_producer] ->(Organization_Product),
+(Organization)-[:has_product]->(Organization_Product)
+
