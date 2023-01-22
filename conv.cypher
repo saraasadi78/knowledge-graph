@@ -35,7 +35,7 @@ create (twitter:SocialNetwork:Cyberspace:thing {title:"twitter", uri:0 , ID:0, t
 
 create (Art:Product:thing {title:"Art", tag:"Art", uri:0})
 create (Cultural:Product:thing {title:"Cultural", source:"NULL", tag:"Cultural", uri:0})
-create (Media:Product:thing {title:"Media". tag:"Media", uri:0})
+create (Media:Product:thing {title:"Media", tag:"Media", uri:0})
 create (Scientific_Research:Product:thing {title:"Scientific-Research",DOI:0,content:"NULL",edition:0, 
 number_of_pages:0,reference:"NULL",status:"NULL",subject:"NULL",tag:"Scientific_Research",text:"NULL",uri:0,version:0})
 
@@ -66,7 +66,7 @@ create (Quran:text:Cultural:Product:thing {title:"Quran", tag:"Quran", uri:0, tr
 
 create (Handicraft:Art:Product:thing {title:"Handicraft",  uri:0, tag:"Handicraft"})
 create (ImageArt:Art:Product:thing {tiltle:"ImageArt",  uri:0, tag:"ImageArt"})
-create (Music:Art:Product:thing {tiltle:"Music", duration:0,content_size:0, uri:0, genre:"NULL" ,tag:"Music"})
+create (:Art:Product:thing {tiltle:"Music", duration:0,content_size:0, uri:0, genre:"NULL" ,tag:"Music"})
 create (PerformingArt:Art:Product:thing {tiltle:"PerformingArt", performance_date:0, miner_type:0, major_type:0 ,uri:0, tag:"PerformingArt" , status:0})
 create (VisualArt:Art:Product:thing {tiltle:"VisualArt",  uri:0, tag:"VisualArt"})
 create (Screenplay:ImageArt:Art:Product:thing {tiltle:"Screenplay" ,duration:0,  uri:0, tag:"Screenplay"})
