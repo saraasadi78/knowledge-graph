@@ -34,8 +34,8 @@ create (Telegram:SocialNetwork:Cyberspace:thing {title:"Telegram", uri:0, ID:0, 
 create (twitter:SocialNetwork:Cyberspace:thing {title:"twitter", uri:0 , ID:0, tag:"twitter"})
 
 create (Art:Product:thing {title:"Art", tag:"Art", uri:0, ID:0})
-create (Cultural:Product:thing {title:"Cultural", source:"NULL", tag:"Cultural", uri:0,, ID:0})
-create (Media:Product:thing {title:"Media", tag:"Media", uri:0,, ID:0})
+create (Cultural:Product:thing {title:"Cultural", source:"NULL", tag:"Cultural", uri:0, ID:0})
+create (Media:Product:thing {title:"Media", tag:"Media", uri:0, ID:0})
 create (Scientific_Research:Product:thing {title:"Scientific-Research",DOI:0,content:"NULL",edition:0, ID:0,
 number_of_pages:0,reference:"NULL",status:"NULL",subject:"NULL",tag:"Scientific_Research",text:"NULL",uri:0,version:0})
 
@@ -70,37 +70,36 @@ create (Music:Art:Product:thing {tiltle:"Music", duration:0,content_size:0, uri:
 create (PerformingArt:Art:Product:thing {tiltle:"PerformingArt", performance_date:0, miner_type:0, major_type:0 ,uri:0, tag:"PerformingArt" , status:0, ID:0})
 create (VisualArt:Art:Product:thing {tiltle:"VisualArt",  uri:0, tag:"VisualArt", ID:0})
 create (Screenplay:ImageArt:Art:Product:thing {tiltle:"Screenplay" ,duration:0,  uri:0, tag:"Screenplay", ID:0})
-create (Video:ImageArt:Art:Product:thing {tiltle:"Video", video_quality:0,  major_type:0, miner_type:0,  genre:"NULL", duration:0,, ID:0
+create (Video:ImageArt:Art:Product:thing {tiltle:"Video", video_quality:0,  major_type:0, miner_type:0,  genre:"NULL", duration:0, ID:0,
 content_size:0, uri:0, tag:"Video" ,caption:"NULL"})
 
 
 //Relations
 
-create 
-(Event)-[:has_Participant] ->(Organization_Event),
-(Image)-[:has_imagetype] -> (Image_type),
-(Event)-[:has_location] -> (Place),
-(Organization)-[:has_member] ->(Person),
-(Product)-[:has_producer] ->(Person_Product),
-(Person)-[:has_product]->(Person_Product),
-(Organization)-[:has_product]->(Person_Product),
-(video)-[:has_videotype]->(Video_type),
-(Person)-[:knows]->(Person),
-(Product)-[:location_created]->(Place),
-(Organization)-[:participate]->(Person_Event)
-(Organization)-[:participate]->(Organization_Event),
-(Person)-[:participate]->(Person_Event),
-(Person)-[:participate]->(Organization_Event),
-(Organization)-[:performs]->(Person_Event),
-(Organization)-[:performs]->(Organization_Event),
-(Person)-[:performs]->(Person_Event),
-(Person)-[:performs]->(Organization_Event),
-(Event)-[:presents]->(Product),
-(Product)-[:related_to]->(Event),
-(Event)-[:top_event]->(Event),
-(Event)-[:has_Participant] ->(Person_Event),
-(Product)-[:has_producer] ->(Organization_Product),
-(Organization)-[:has_product]->(Organization_Product)
+create (Event)-[:has_Participant] ->(Organization_Event)
+create (Image)-[:has_imagetype] -> (Image_type)
+create (Event)-[:has_location] -> (Place)
+create (Organization)-[:has_member] ->(Person)
+create (Product)-[:has_producer] ->(Person_Product)
+create (Person)-[:has_product]->(Person_Product)
+create (Organization)-[:has_product]->(Person_Product)
+create (video)-[:has_videotype]->(Video_type)
+create (Person)-[:knows]->(Person)
+create (Product)-[:location_created]->(Place)
+create (Organization)-[:participate]->(Person_Event)
+create (Organization)-[:participate]->(Organization_Event)
+create (Person)-[:participate]->(Person_Event)
+create (Person)-[:participate]->(Organization_Event)
+create (Organization)-[:performs]->(Person_Event)
+create (Organization)-[:performs]->(Organization_Event)
+create (Person)-[:performs]->(Person_Event)
+create (Person)-[:performs]->(Organization_Event)
+create (Event)-[:presents]->(Product)
+create (Product)-[:related_to]->(Event)
+create (Event)-[:top_event]->(Event)
+create (Event)-[:has_Participant] ->(Person_Event)
+create (Product)-[:has_producer] ->(Organization_Product)
+create (Organization)-[:has_product]->(Organization_Product)
 
 
 //Individuals 
@@ -121,18 +120,18 @@ create (E_10:Event {title:"جشنواره دهم"})
 create (film:Video_type)
 create (Img_1:Image {title:"عکس شماره 1", p_type:"پوستر"})
 create (Img_2:Image {title:"عکس شماره 2", p_type:"پوستر"})
-create (P1:Place {city_name:"مشهد", province_name:"خراسان رضوی"}
-create (P2:Place {city_name:"سبزوار", province_name:"خراسان رضوی"}
+create (P1:Place {city_name:"مشهد", province_name:"خراسان رضوی"})
+create (P2:Place {city_name:"سبزوار", province_name:"خراسان رضوی"})
 create (painting:Image_type)
 create (photo:Image_type)
 create (poster:Image_type)
 create (Per_1:Person  {familyName:"سلطانی" , givenName:"محمود"})
 create (Per_2:Person  {familyName:"سعیدی" , givenName:"رضا"})
 create (Per_3:Person  {familyName:"کاهانی" , givenName:"محسن"})
-create (Per_Event_1:Person-Event {relation_type:"شرکت کننده"})
-create (Per_Event_2:Person-Event {relation_type:"داور"})
-create (Per_Pro_1:Person-Product)
-create (Per_Pro_2:Person-Product)
+create (Per_Event_1:Person_Event {relation_type:"شرکت کننده"})
+create (Per_Event_2:Person_Event {relation_type:"داور"})
+create (Per_Pro_1:Person_Product)
+create (Per_Pro_2:Person_Product)
 create (Vid_1:video {title:"مراسم اختتامیه"})
 create (trailer:video)
 create (shortfilm:video)
