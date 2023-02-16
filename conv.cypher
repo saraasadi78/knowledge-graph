@@ -170,3 +170,24 @@ create (Vid_1)-[:has_videotype]->(rawvideo)
 create (Vid_1)-[:related_to]->(E1)
 
 //Match (e:Event), (o:Organization_Event) CREATE (e)-[h:has_Participant]->(o) RETURN e,h,o
+
+
+MATCH (e:Event), (o:Organization_Event)
+WHERE e.title = 'Event' AND o.title = 'Organization_Event'
+CREATE (e)-[:has_Participant]->(o)
+
+MATCH (i:Image), (t:Image_type)
+WHERE i.title = 'Image' AND t.title = 'Image_type'
+CREATE (i)-[:has_imagetype]->(t)
+
+MATCH (e:Event), (p:Place)
+WHERE e.title = 'Event' AND p.title = 'Place'
+CREATE (e)-[:has_location]->(p)
+
+MATCH (organization:Organization), (person:Person)
+CREATE (organization)-[:has_member]->(person)
+
+MATCH (n:thing {title:"Cyberspace"})
+MERGE (Event:thing { title:"Event",duration:0 ,e_type:0 ,end_date:0 , eventStatus:0 ,  is_accessible_for_free:"NULL" , language:"NULL",
+number_of_people_attending:0, previous_start_date:0 , start_date:0, subject:"NULL" ,uri:0, ID:0, tag:"Event"})
+CREATE (Event)-[:has_location]->(n)
