@@ -2,12 +2,17 @@ CREATE (Cyberspace:thing {title: "Cyberspace"})
 CREATE (Weblog:Cyberspace {title: "Weblog", url:"NULL", description:"NULL", person_name:"NULL"})
 CREATE (Website:Cyberspace {title: "Website", url:"NULL", description:"NULL", affiliation:0})
 CREATE (SocialNetwork:Cyberspace {title: "SocialNetwork", account_type:"NULL", description:"NULL"})
-
 CREATE (Weblog)-[:is_a]->(Cyberspace)
 CREATE (Website)-[:is_a]->(Cyberspace)
 CREATE (SocialNetwork)-[:is_a]->(Cyberspace)
 
 
+CREATE (Event:thing { title:"Event",name:"event",duration:0 ,end_date:0 , eventStatus:0 ,  is_accessible_for_free:"NULL" , language:"NULL",
+number_of_people_attending:0, previous_start_date:0 , start_date:0, subject:"NULL"})
+CREATE (Organization:thing {title:"Organization", name:"Organization",address:0, activity_type:0, award:0, email:"NULL", fax_number:0 ,telephone:0})
+CREATE (Product:thing {title:"Product",name:"Product", category:"NULL", brand:"NULL" ,description:"NULL" , is_accessible_for_free:"NULL", language:"NULL",
+material:"NULL",modification_date:0, p_type:0, productID:0, product_name:"NULL",production_date:0, release_date:0,award:0, uri:0, subject:"NULL", ID:0,tag:"Product"})
+CREATE (Place:thing {title:"Place",city_name:"NULL",province_name:"NULL" , address:0, area_code:0 , area_name:"NULL",  coordinates:0 , historical_map:0})
 CREATE (Person:thing {title:"Person", givenName:"NULL", familyName:"NULL", activeYears:0, award:0, birthDate:0,deathDate:0, 
 address:0, gender:"NULL", email:"NULL", other_activity:0, homepage:"NULL", publication:"NULL", telephone:0, nationality:"NULL", speciality:0}) 
 WITH Person
@@ -22,7 +27,6 @@ CREATE (Scientific_Center:Legal {title:"Scientific_Center"})
 CREATE (Research_Center:Legal {title:"Research_Center"})
 CREATE (Art_Center:Legal {title:"Art_Center"})
 CREATE (NGO:Legal {title:"NGO"})
-WITH Individuals, Legal, Artist, Author, Researcher, Servant, Institution, Scientific_Center, Research_Center, Art_Center, NGO
 CREATE (Artist)-[:is_a]->(Individuals)
 CREATE (Author)-[:is_a]->(Individuals)
 CREATE (Researcher)-[:is_a]->(Individuals)
@@ -32,3 +36,12 @@ CREATE (Scientific_Center)-[:is_a]->(Legal)
 CREATE (Research_Center)-[:is_a]->(Legal)
 CREATE (Art_Center)-[:is_a]->(Legal)
 CREATE (NGO)-[:is_a]->(Legal)
+CREATE (Person)-[:knows]->(Person)
+CREATE (Person)-[:organizes]->(Event)
+CREATE (Person)-[:acts]->(Event)
+CREATE (Person)-[:participates]->(Event)
+CREATE (Person)-[:performes]->(Event)
+CREATE (Person)-[:directs]->(Event)
+CREATE (Person)-[:affiliates]->(Organization)
+CREATE (Person)-[:is_a_member_of]->(Organization)
+
