@@ -15,7 +15,8 @@ material:"NULL",modification_date:0, p_type:0, productID:0, product_name:"NULL",
 CREATE (Place:thing {title:"Place",city_name:"NULL",province_name:"NULL" , address:0, area_code:0 , area_name:"NULL",  coordinates:0 , historical_map:0})
 CREATE (Person:thing {title:"Person", givenName:"NULL", familyName:"NULL", activeYears:0, award:0, birthDate:0,deathDate:0, 
 address:0, gender:"NULL", email:"NULL", other_activity:0, homepage:"NULL", publication:"NULL", telephone:0, nationality:"NULL", speciality:0}) 
-WITH Person
+CREATE (Person_Product:thing {title:"Person-Product", description:"NULL", end_date:0 , start_date:0 ,relation_type:0 , type_of_collaboration:"NULL",ID:0})
+WITH Person , Event, Organization, Product, Place , Person_Product
 CREATE (Individuals:Person {title:"Individuals", name:"Individuals"})-[:is_a]->(Person)
 CREATE (Legal:Person {title:"Legal" , name:"Legal"})-[:is_a]->(Person)
 CREATE (Artist:Individuals {title:"Artist" , name:"Artist" })
@@ -44,4 +45,13 @@ CREATE (Person)-[:performes]->(Event)
 CREATE (Person)-[:directs]->(Event)
 CREATE (Person)-[:affiliates]->(Organization)
 CREATE (Person)-[:is_a_member_of]->(Organization)
-
+CREATE (Organization)-[:funds]->(Event)
+CREATE (Organization)-[:organizes]->(Event)
+CREATE (Organization)-[:performes]->(Event)
+CREATE (Organization)-[:participates]->(Event)
+CREATE (Event)-[:hasLocation]->(Place)
+CREATE (Event)-[:presents]->(Product)
+CREATE (Product)-[:locationCreated]->(Place)
+CREATE (Person_Product)-[:isProduced]->(Product)
+CREATE (Product)-[:isRelatedTo]->(Product)
+CREATE (Event)-[:previousEvent_superEvent_subEvent]->(Event)
