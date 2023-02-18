@@ -80,19 +80,20 @@ CREATE (research:ResearchProduct {title:"research",budget_total:0, objective:0, 
 keywords:"NULL",type:"research", area:"NULL"})-[:is_a]->(ResearchProduct)
 
 WITH Product
-CREATE (Art:Product {title:"Art", name:"Art"})-[:is_a]->(Product)
 CREATE (Media:Product:thing {title:"Media", tag:"Media", uri:0, ID:0})-[:is_a]->(Product)
-CREATE (PerformingArt:Art:Product {tiltle:"PerformingArt", miner_type:0, major_type:0 , language:"NULL", situation:0, year:0,
+CREATE (Art:Product {title:"Art", name:"Art"})-[:is_a]->(Product)
+CREATE (PerformingArt:Art:Product {title:"PerformingArt", miner_type:0, major_type:0, language:"NULL", situation:0, year:0,
 reward:0, subject:"NULL"})-[:is_a]->(Art)
-CREATE (VisualArt:Art:Product {tiltle:"VisualArt",ReferenceLink:"NULL",Reference:"NULL",situation:0, year:0, reward:0, area:"NULL",
+CREATE (VisualArt:Art:Product {title:"VisualArt",ReferenceLink:"NULL",Reference:"NULL",situation:0, year:0, reward:0, area:"NULL",
 subject:"NULL", miner_type:0, major_type:0})-[:is_a]->(Art)
-CREATE (ImageArt:Art:Product {tiltle:"ImageArt"})-[:is_a]->(Art)
-CREATE (Music:Art:Product {tiltle:"Music",language:"NULL",year:0, reward:0, area:"NULL",subject:"NULL"})-[:is_a]->(Art)
-CREATE (Handicraft:Art:Product {title:"Handicraft" ,situation:0, year:0, type:"NULL" ,reward:0,subject:"NULL", area:"NULL"})-[:is_a]->(Art)
-CREATE (Screenplay:ImageArt:Art {tiltle:"Screenplay",situation:0, year:0, type:"NULL" ,reward:0,subject:"NULL", area:"NULL" ,time:0, 
-producerslastname:"NULL",producersname:"NUL", directorslastname:"NULL", directorsname:"NULL", miner_type:0, major_type:0 })-[:is_a]->(ImageArt)
-CREATE (Video:ImageArt:Art {tiltle:"Video", name:"Video" , video_quality:0, major_type:0, miner_type:0,  genre:"NULL", duration:0,content_size:0,
+CREATE (ImageArt:Art:Product {title:"ImageArt"})-[:is_a]->(Art)
+CREATE (Music:Art:Product {title:"Music",language:"NULL",year:0, reward:0, area:"NULL",subject:"NULL"})-[:is_a]->(Art)
+CREATE (Handicraft:Art:Product {title:"Handicraft", situation:0, year:0, type:"NULL", reward:0, subject:"NULL", area:"NULL"})-[:is_a]->(Art)
+CREATE (Screenplay:ImageArt:Art {title:"Screenplay", situation:0, year:0, type:"NULL", reward:0, subject:"NULL", area:"NULL", time:0, 
+producerslastname:"NULL",producersname:"NULL", directorslastname:"NULL", directorsname:"NULL", miner_type:0, major_type:0 })-[:is_a]->(ImageArt)
+CREATE (Video:ImageArt:Art {title:"Video", name:"Video", video_quality:0, major_type:0, miner_type:0, genre:"NULL", duration:0, content_size:0,
 caption:"NULL"})-[:is_a]->(ImageArt)
+
 WITH Media
 CREATE (Multimedia:Media:Product:thing {title:"Multimedia", content_size:0,content_type:"NULL", genre:"NULL" , tag:"Multimedia", uri:0 })-[:is_a]->(Media)
 CREATE (Notices:Media:Product:thing {title:"Notices" ,author:"NULL", tag:"Notices", uri:0})-[:is_a]->(Media)
@@ -107,7 +108,7 @@ CREATE (Podcast:Multimedia:Media {title:"Podcast" , category:"NULL",status:0,con
 CREATE (Music_Video:Multimedia:Media {title:"Music_Video", duration:0,size:0, category:"NULL",date:0, contentType:0})-[:is_a]->(Multimedia)
 CREATE (Audio:Multimedia:Media{title:"Audio", category:"NULL",status:0,contentType:0,subject:"NULL"})-[:is_a]->(Multimedia)
 CREATE (Photo:Multimedia:Media{title:"Photo", type:"NULL", date:0, subject:"NULL",status:0})-[:is_a]->(Multimedia)
-CREATE (Motion_Graphics:Multimedia:Medi{title:"Motion_Graphics"})-[:is_a]->(Multimedia)
+CREATE (Motion_Graphics:Multimedia:Media {title:"Motion_Graphics"})-[:is_a]->(Multimedia)
 CREATE (Film:Multimedia:Media{title:"Film", duration:0,size:0,date:0, contentType:0})-[:is_a]->(Multimedia)
 CREATE (Radio_program:Multimedia:Media{title:"Radio_program", status:0, type:"NULL", date:0, subject:"NULL", guest_rank:0,contentType:0})-[:is_a]->(Multimedia)
 CREATE (Animation:Multimedia:Media{title:"Animation"})-[:is_a]->(Multimedia)
