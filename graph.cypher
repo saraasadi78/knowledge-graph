@@ -55,3 +55,26 @@ CREATE (Product)-[:locationCreated]->(Place)
 CREATE (Person_Product)-[:isProduced]->(Product)
 CREATE (Product)-[:isRelatedTo]->(Product)
 CREATE (Event)-[:previousEvent_superEvent_subEvent]->(Event)
+
+WITH Product
+CREATE (Cultural:Product {title:"Cultural"})-[:is_a]->(Product)
+CREATE (Poem:Cultural {title:"Poem", age_range:0, centrality:0, tag:"Poem", uri:0,era:0 , major_type:0 , miner_type:0,format:"NULL", reward:"NULL",
+source:0, situation:0, language:"NULL"})-[:is_a]->(Cultural)
+CREATE (Prose:Cultural {title:"Prose", language:"NULL", type:"NULL", subject:"NULL"})-[:is_a]->(Cultural)
+CREATE (Quran:Prose {title:"Quran",translated_text:"NULL", shomareayat:0, soore:0})-[:is_a]->(Prose)
+CREATE (Quote:Prose {title:"Quote", text:"NULL", source:"NULL"})-[:is_a]->(Prose)
+CREATE (Story:Prose {title:"Story",source:"NULL", status:0, contentPage:0, reward:0})-[:is_a]->(Prose)
+CREATE (Hadith:Prose {title:"Hadith", text:"NULL",source:"NULL"})-[:is_a]->(Prose)
+CREATE (Letter:Prose {title:"Letter", eventName:"NULL", status:0, source:"NULL", reward:0})-[:is_a]->(Prose)
+CREATE (ResearchProduct:Product {title:"ResearchProduct", name:"ResearchProduct", language:"NULL", number_of_pages:0, content:"NULL", doi:0, edition:0,
+title:"NULL", version:0})-[:is_a]->(Product)
+CREATE (Thesis:ResearchProduct {title:"Thesis", abstract:0, keywords:0, thesis_degree:"NULL",defense_date:0 ,Field:"NULL", Status:0 ,
+university:"NULL", student_name:"NULL" ,type:"NULL", EnglishAbstract:"NULL", EnglishTitle:"NULL"})-[:is_a]->(ResearchProduct)
+CREATE (Article:ResearchProduct {title:"Article", citation:0, abstract:0, keywords:"NULL", type:"NULL" ,Status:"NULL" ,university:"NULL",
+English_title:"NULL", EnglishAbstract:"NULL", AcceptDate:0})-[:is_a]->(ResearchProduct)
+CREATE (Manuscript:ResearchProduct {title:"Manuscript", type:"NULL" , citation:0 ,English_title:"NULL", Status:0 ,unique_ID:0 ,StorageLibrary:0 ,
+StorageCity:"NULL", StorageCountry:"NULL", line_type:"NULL", place_of_production:"NULL", PageCount:0 ,size:0, ProduceLocation:"NULL"})-[:is_a]->(ResearchProduct)
+CREATE (Book:ResearchProduct {title:"Book", ISBN:0, first_publication_date:0 ,citation:0, genre:"NULL",Reference:0, type:"NULL",language:"NULL",
+chapter:0 ,abstract:0 , keywords:"NULL", last_publication_date:0})-[:is_a]->(ResearchProduct)
+CREATE (research:ResearchProduct {title:"research",budget_total:0, objective:0, abstract:0, start_date:0, Status:"NULL", number_of_volumes:0,
+keywords:"NULL",type:"research", area:"NULL"})-[:is_a]->(ResearchProduct)
