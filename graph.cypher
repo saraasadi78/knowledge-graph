@@ -66,8 +66,7 @@ CREATE (Quote:Prose {title:"Quote", text:"NULL", source:"NULL"})-[:is_a]->(Prose
 CREATE (Story:Prose {title:"Story",source:"NULL", status:0, contentPage:0, reward:0})-[:is_a]->(Prose)
 CREATE (Hadith:Prose {title:"Hadith", text:"NULL",source:"NULL"})-[:is_a]->(Prose)
 CREATE (Letter:Prose {title:"Letter", eventName:"NULL", status:0, source:"NULL", reward:0})-[:is_a]->(Prose)
-CREATE (ResearchProduct:Product:thing {title:"ResearchProduct", language:"NULL", number_of_pages:0, content:"NULL", doi:0, edition:0,
-title:"NULL", version:0})-[:is_a]->(Product)
+CREATE (ResearchProduct:Product:thing {title:"ResearchProduct", language:"NULL", number_of_pages:0, content:"NULL", doi:0, edition:0,version:0})-[:is_a]->(Product)
 CREATE (Thesis:ResearchProduct {title:"Thesis", abstract:0, keywords:0, thesis_degree:"NULL",defense_date:0 ,Field:"NULL", Status:0 ,
 university:"NULL", student_name:"NULL" ,type:"NULL", EnglishAbstract:"NULL", EnglishTitle:"NULL"})-[:is_a]->(ResearchProduct)
 CREATE (Article:ResearchProduct {title:"Article", citation:0, abstract:0, keywords:"NULL", type:"NULL" ,Status:"NULL" ,university:"NULL",
