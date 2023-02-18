@@ -81,18 +81,18 @@ keywords:"NULL",type:"research", area:"NULL"})-[:is_a]->(ResearchProduct)
 
 WITH Product
 CREATE (Media:Product:thing {title:"Media", tag:"Media", uri:0, ID:0})-[:is_a]->(Product)
-CREATE (Art:Product {title:"Art", name:"Art"})-[:is_a]->(Product)
-CREATE (PerformingArt:Art:Product {title:"PerformingArt", miner_type:0, major_type:0, language:"NULL", situation:0, year:0,
-reward:0, subject:"NULL"})-[:is_a]->(Art)
-CREATE (VisualArt:Art:Product {title:"VisualArt",ReferenceLink:"NULL",Reference:"NULL",situation:0, year:0, reward:0, area:"NULL",
-subject:"NULL", miner_type:0, major_type:0})-[:is_a]->(Art)
-CREATE (ImageArt:Art:Product {title:"ImageArt"})-[:is_a]->(Art)
-CREATE (Music:Art:Product {title:"Music",language:"NULL",year:0, reward:0, area:"NULL",subject:"NULL"})-[:is_a]->(Art)
-CREATE (Handicraft:Art:Product {title:"Handicraft", situation:0, year:0, type:"NULL", reward:0, subject:"NULL", area:"NULL"})-[:is_a]->(Art)
-CREATE (Screenplay:ImageArt:Art {title:"Screenplay", situation:0, year:0, type:"NULL", reward:0, subject:"NULL", area:"NULL", time:0, 
-producerslastname:"NULL",producersname:"NULL", directorslastname:"NULL", directorsname:"NULL", miner_type:0, major_type:0 })-[:is_a]->(ImageArt)
-CREATE (Video:ImageArt:Art {title:"Video", name:"Video", video_quality:0, major_type:0, miner_type:0, genre:"NULL", duration:0, content_size:0,
-caption:"NULL"})-[:is_a]->(ImageArt)
+CREATE (Honar:Product {title:"Art", name:"Art"})-[:is_a]->(Product)
+CREATE (PerformingArt:Honar {title:"PerformingArt", miner_type:0, major_type:0, language:"NULL", situation:0, year:0,
+reward:0, subject:"NULL"})-[:is_a]->(Honar)
+CREATE (VisualArt:Honar {title:"VisualArt",ReferenceLink:"NULL",Reference:"NULL",situation:0, year:0, reward:0, area:"NULL",
+subject:"NULL", miner_type:0, major_type:0})-[:is_a]->(Honar)
+CREATE (IA:Honar {title:"ImageArt"})-[:is_a]->(Honar)
+CREATE (Music:Honar {title:"Music",language:"NULL",year:0, reward:0, area:"NULL",subject:"NULL"})-[:is_a]->(Honar)
+CREATE (Handicraft:Honar {title:"Handicraft", situation:0, year:0, type:"NULL", reward:0, subject:"NULL", area:"NULL"})-[:is_a]->(Honar)
+CREATE (Screenplay:IA {title:"Screenplay", situation:0, year:0, type:"NULL", reward:0, subject:"NULL", area:"NULL", time:0, 
+producerslastname:"NULL",producersname:"NULL", directorslastname:"NULL", directorsname:"NULL", miner_type:0, major_type:0 })-[:is_a]->(IA)
+CREATE (Video:IA {title:"Video", name:"Video", video_quality:0, major_type:0, miner_type:0, genre:"NULL", duration:0, content_size:0,
+caption:"NULL"})-[:is_a]->(IA)
 
 WITH Media
 CREATE (Multimedia:Media:Product:thing {title:"Multimedia", content_size:0,content_type:"NULL", genre:"NULL" , tag:"Multimedia", uri:0 })-[:is_a]->(Media)
