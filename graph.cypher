@@ -1,10 +1,15 @@
-CREATE (Cyberspace:thing {title: "Cyberspace"})
-CREATE (Weblog:Cyberspace {title: "Weblog", url:"NULL", description:"NULL", person_name:"NULL"})
-CREATE (Website:Cyberspace {title: "Website", url:"NULL", description:"NULL", affiliation:0})
-CREATE (SocialNetwork:Cyberspace {title: "SocialNetwork", account_type:"NULL", description:"NULL"})
-CREATE (Weblog)-[:is_a]->(Cyberspace)
-CREATE (Website)-[:is_a]->(Cyberspace)
-CREATE (SocialNetwork)-[:is_a]->(Cyberspace)
+CREATE (Cyberspace:thing {title: "Cyberspace"}),
+       (Weblog:Cyberspace {title: "Weblog", url:"NULL", description:"NULL", person_name:"NULL"}),
+       (Website:Cyberspace {title: "Website", url:"NULL", description:"NULL", affiliation:0}),
+       (SocialNetwork:Cyberspace {title: "SocialNetwork", account_type:"NULL", description:"NULL"})
+CREATE (Weblog)-[:is_a]->(Cyberspace),
+       (Website)-[:is_a]->(Cyberspace),
+       (SocialNetwork)-[:is_a]->(Cyberspace)
+
+CREATE (Instagram:SocialNetwork {title:"Instagram",  InstagramID:"NULL"})-[:is_a]->(SocialNetwork),
+       (Telegram:SocialNetwork {title:"Telegram", TelegramID:"NULL"})-[:is_a]->(SocialNetwork),
+       (Twitter:SocialNetwork {title:"Twitter", TwitterID:"NULL"})-[:is_a]->(SocialNetwork)
+
 
 CREATE (Event:thing { title:"Event",name:"event",duration:0 ,end_date:0 , eventStatus:0 ,  is_accessible_for_free:"NULL" , language:"NULL",
 number_of_people_attending:0, previous_start_date:0 , start_date:0, subject:"NULL"})
@@ -66,7 +71,7 @@ CREATE (Quote:Prose {title:"Quote", text:"NULL", source:"NULL"})-[:is_a]->(Prose
 CREATE (Story:Prose {title:"Story",source:"NULL", status:0, contentPage:0, reward:0})-[:is_a]->(Prose)
 CREATE (Hadith:Prose {title:"Hadith", text:"NULL",source:"NULL"})-[:is_a]->(Prose)
 CREATE (Letter:Prose {title:"Letter", eventName:"NULL", status:0, source:"NULL", reward:0})-[:is_a]->(Prose)
-CREATE (ResearchProduct:Product:thing {title:"ResearchProduct", language:"NULL", number_of_pages:0, content:"NULL", doi:0, edition:0,version:0})-[:is_a]->(Product)
+CREATE (ResearchProduct:Product {title:"ResearchProduct", language:"NULL", number_of_pages:0, content:"NULL", doi:0, edition:0,version:0})-[:is_a]->(Product)
 CREATE (Thesis:ResearchProduct {title:"Thesis", abstract:0, keywords:0, thesis_degree:"NULL",defense_date:0 ,Field:"NULL", Status:0 ,
 university:"NULL", student_name:"NULL" ,type:"NULL", EnglishAbstract:"NULL", EnglishTitle:"NULL"})-[:is_a]->(ResearchProduct)
 CREATE (Article:ResearchProduct {title:"Article", citation:0, abstract:0, keywords:"NULL", type:"NULL" ,Status:"NULL" ,university:"NULL",
@@ -79,7 +84,7 @@ CREATE (research:ResearchProduct {title:"research",budget_total:0, objective:0, 
 keywords:"NULL",type:"research", area:"NULL"})-[:is_a]->(ResearchProduct)
 
 WITH Product
-CREATE (Media:Product:thing {title:"Media", tag:"Media", uri:0, ID:0})-[:is_a]->(Product)
+CREATE (Media:Product {title:"Media", tag:"Media", uri:0, ID:0})-[:is_a]->(Product)
 CREATE (Honar:Product {title:"Art", name:"Art"})-[:is_a]->(Product)
 CREATE (PerformingArt:Honar {title:"PerformingArt", miner_type:0, major_type:0, language:"NULL", situation:0, year:0,
 reward:0, subject:"NULL"})-[:is_a]->(Honar)
@@ -94,21 +99,20 @@ CREATE (Video:IA {title:"Video", name:"Video", video_quality:0, major_type:0, mi
 caption:"NULL"})-[:is_a]->(IA)
 
 WITH Media
-CREATE (Multimedia:Media:Product:thing {title:"Multimedia", content_size:0,content_type:"NULL", genre:"NULL" , tag:"Multimedia", uri:0 })-[:is_a]->(Media)
-CREATE (Notices:Media:Product:thing {title:"Notices" ,author:"NULL", tag:"Notices", uri:0})-[:is_a]->(Media)
-CREATE (News:Notices:Media:Product:thing {title:"News", publication_date:0, tag:"News", uri:0})-[:is_a]->(Notices)
-CREATE (Report:Notices:Media:Product:thing {title:"Report",  publication_date:0, tag:"Report",uri:0 })-[:is_a]->(Notices)
-CREATE (Note:Notices:Media:Product:thing {title:"Note", scope_note:"NULL", tag:"Note", uri:0})-[:is_a]->(Notices)
-CREATE (Conversation:Notices:Media:Product:thing {title:"Conversation", tag:"Conversation", uri:0})-[:is_a]->(Notices)
+CREATE (Multimedia:Media  {title:"Multimedia", content_size:0,content_type:"NULL", genre:"NULL" , tag:"Multimedia", uri:0 })-[:is_a]->(Media)
+CREATE (Notices:Media {title:"Notices" ,author:"NULL", tag:"Notices", uri:0})-[:is_a]->(Media)
+CREATE (News:Notices  {title:"News", publication_date:0, tag:"News", uri:0})-[:is_a]->(Notices)
+CREATE (Report:Notices {title:"Report",  publication_date:0, tag:"Report",uri:0 })-[:is_a]->(Notices)
+CREATE (Note:Notices  {title:"Note", scope_note:"NULL", tag:"Note", uri:0})-[:is_a]->(Notices)
+CREATE (Conversation:Notices  {title:"Conversation", tag:"Conversation", uri:0})-[:is_a]->(Notices)
 
-CREATE (Telecast:Multimedia:Media {title:"Telecast",status:0, type:"NULL", date:0, subject:"NULL",guest_rank:0,contentType:0})-[:is_a]->(Multimedia)
-CREATE (Image:Multimedia:Media {title:"Image", photographer:"NULL",type:"NULL", date:0,subject:"NULL",status:0})-[:is_a]->(Multimedia)
-CREATE (Podcast:Multimedia:Media {title:"Podcast" , category:"NULL",status:0,contentType:0,subject:"NULL" })-[:is_a]->(Multimedia)
-CREATE (Music_Video:Multimedia:Media {title:"Music_Video", duration:0,size:0, category:"NULL",date:0, contentType:0})-[:is_a]->(Multimedia)
-CREATE (Audio:Multimedia:Media{title:"Audio", category:"NULL",status:0,contentType:0,subject:"NULL"})-[:is_a]->(Multimedia)
-CREATE (Photo:Multimedia:Media{title:"Photo", type:"NULL", date:0, subject:"NULL",status:0})-[:is_a]->(Multimedia)
-CREATE (Motion_Graphics:Multimedia:Media {title:"Motion_Graphics"})-[:is_a]->(Multimedia)
-CREATE (Film:Multimedia:Media{title:"Film", duration:0,size:0,date:0, contentType:0})-[:is_a]->(Multimedia)
-CREATE (Radio_program:Multimedia:Media{title:"Radio_program", status:0, type:"NULL", date:0, subject:"NULL", guest_rank:0,contentType:0})-[:is_a]->(Multimedia)
-CREATE (Animation:Multimedia:Media{title:"Animation"})-[:is_a]->(Multimedia)
-
+CREATE (Telecast:Multimedia  {title:"Telecast",status:0, type:"NULL", date:0, subject:"NULL",guest_rank:0,contentType:0})-[:is_a]->(Multimedia)
+CREATE (Image:Multimedia {title:"Image", photographer:"NULL",type:"NULL", date:0,subject:"NULL",status:0})-[:is_a]->(Multimedia)
+CREATE (Podcast:Multimedia {title:"Podcast" , category:"NULL",status:0,contentType:0,subject:"NULL" })-[:is_a]->(Multimedia)
+CREATE (Music_Video:Multimedia  {title:"Music_Video", duration:0,size:0, category:"NULL",date:0, contentType:0})-[:is_a]->(Multimedia)
+CREATE (Audio:Multimedia {title:"Audio", category:"NULL",status:0,contentType:0,subject:"NULL"})-[:is_a]->(Multimedia)
+CREATE (Photo:Multimedia {title:"Photo", type:"NULL", date:0, subject:"NULL",status:0})-[:is_a]->(Multimedia)
+CREATE (Motion_Graphics:Multimedia  {title:"Motion_Graphics"})-[:is_a]->(Multimedia)
+CREATE (Film:Multimedia {title:"Film", duration:0,size:0,date:0, contentType:0})-[:is_a]->(Multimedia)
+CREATE (Radio_program:Multimedia {title:"Radio_program", status:0, type:"NULL", date:0, subject:"NULL", guest_rank:0,contentType:0})-[:is_a]->(Multimedia)
+CREATE (Animation:Multimedia {title:"Animation"})-[:is_a]->(Multimedia)
