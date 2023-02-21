@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <title>Bonyad Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="src/style.css" rel="stylesheet">
+    <script type=text/javascript src="src/scripts.js"></script>
+</head>
+<body>
+
+<header>
+    <img src="src/img/Imam_Reza_Shrine.jpg" alt="Header Image" style="width: 100%; height: auto;">
+</header>
+
+<div class="container-border">
+
+    <header>
+        <h1>خوش آمدید</h1>
+        <br><br>
+    </header>
+
+    <div id="wrapper" style="text-align: right;">
+        <div class="container">
+
+            <h2>لیست جشنواره‌های بنیاد امام رضا علیه‌السلام</h2>
+            <br>
+
+            <label for="picture-list">:جشنواره را انتخاب کنید </label>
+            <select id="picture-list" onchange="displayPicture()">
+                <option value="">یک نمونه انتخاب کنید</option>
+                <option value="All Events">همه</option>
+                <option value="Event1">رویداد ۱</option>
+                <option value="Event2">۲ رویداد</option>
+                <option value="Event3">۳ رویداد</option>
+                <option value="Event4">۴ رویداد</option>
+                <option value="Event5">رویداد ۵</option>
+            </select>
+            <br>
+
+            <img id="picture" src="" alt="" , class="center">
+
+        </div>
+    </div>
+
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="bot"></div>
+</div>
+
+</body>
+</html>
+
