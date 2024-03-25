@@ -1,8 +1,10 @@
 # knowledge-graph in ![image](https://user-images.githubusercontent.com/45791009/220423974-4c6752b0-ec65-4082-a935-5b6003c0f3fd.png)
 
+Managing Big Data: Knowledge Graph Implementation with Neo4j 
+
 This project focuses on creating a Knowledge Graph using Neo4j's graph database management system and the Cypher language.
 
-The Knowledge Graph serves as a powerful tool for visualizing and analyzing complex datasets, enabling efficient data representation and exploration.
+The Knowledge Graph serves as a powerful tool for visualizing and analyzing big data and complex datasets, enabling efficient data representation and exploration.
 
 ## Features:
 
@@ -23,6 +25,8 @@ An overview of the data structure
 ---
 
 ## User Interface:
+
+Capturing big data with Knowledge Graph
 
  A screenshot of the website in the repository, showcasing the user interface for graph exploration
  
